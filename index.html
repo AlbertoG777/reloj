@@ -22,7 +22,8 @@
             var horas =  ahora.getHours().toString().padStart(2, "0");
             var minutos = ahora.getMinutes().toString().padStart(2, "0");
             var segundos = ahora.getSeconds().toString().padStart(2, "0");
-            return horas + ":" + minutos + ":" + segundos;
+            var milisegundos = ahora.getMilliseconds().toString().padStart(2, "0");
+            return horas + ":" + minutos + ":" + segundos + ":" + milisegundos;
         }
 
         //FUNCION PARA ACTUALIZAR EL CONTENIDO DEL RELOJ
@@ -32,7 +33,7 @@
         }
 
         //SE actualiza el reloj cada segundo
-        setInterval(actualizarHora, 1000)
+        setInterval(actualizarHora, 100)
 
 
 
