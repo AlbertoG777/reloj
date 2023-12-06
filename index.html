@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reloj.css">
+    <title>relojJS</title>
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Reloj</h1>
+    
+    <div id="reloj"></div>
+
+    <script>
+        //  FUNCION PARA OBTENER LA HORA ACTUAL
+        const horaActual=() => {
+            var ahora = new Date();
+            var horas =  ahora.getHours().toString().padStart(2, "0");
+            var minutos = ahora.getMinutes().toString().padStart(2, "0");
+            var segundos = ahora.getSeconds().toString().padStart(2, "0");
+            return horas + ":" + minutos + ":" + segundos;
+        }
+
+        //FUNCION PARA ACTUALIZAR EL CONTENIDO DEL RELOJ
+        const actualizarHora=() => {
+            var reloj = document.getElementById("reloj");
+            reloj.textContent = horaActual();
+        }
+
+        //SE actualiza el reloj cada segundo
+        setInterval(actualizarHora, 1000)
+
+
+
+        //iniciar el reloj al cargar la pagina
+        actualizarHora();
+
+    </script>
+</body>
+</html>

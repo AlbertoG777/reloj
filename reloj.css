@@ -1,0 +1,86 @@
+body {
+    /* color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: black; */
+    background-color:#000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+    
+}
+h1{
+    font-size: 40px;
+    position: absolute;
+right: 650px;
+    margin-top: -30%;
+    text-shadow: 0 0 10px rgba(255,255,255,1) , 0 0 20px rgba(255,255,255,1) , 0 0 30px rgba(255,255,255,1) , 0 0 40px #00ffff , 0 0 70px #00ffff , 0 0 80px #00ffff , 0 0 100px #00ffff ;
+    
+}
+
+#reloj {
+font-size: 50px;
+position: absolute;
+right: 600px;
+color: #fff;
+	margin-top: -10%;
+	text-shadow:
+		0 0 5px rgba(0,178,255,1),
+		0 0 10px rgba(0,178,255,1),
+		0 0 20px rgba(0,178,255,1),
+		0 0 40px rgba(38,104,127,1),
+		0 0 80px rgba(38,104,127,1),
+		0 0 90px rgba(38,104,127,1),
+		0 0 100px rgba(38,104,127,1),
+		0 0 140px rgba(38,104,127,1),
+		0 0 180px rgba(38,104,127,1);
+       
+  
+}
+
+
+
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reloj.css">
+    <title>relojJS</title>
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <h1>Reloj</h1>
+    
+    <div id="reloj"></div>
+
+    <script>
+        //  FUNCION PARA OBTENER LA HORA ACTUAL
+        function horaActual() {
+            var ahora = new Date();
+            var horas =  ahora.getHours().toString().padStart(2, "0");
+            var minutos = ahora.getMinutes().toString().padStart(2, "0");
+            var segundos = ahora.getSeconds().toString().padStart(2, "0");
+            return horas + ":" + minutos + ":" + segundos;
+        }
+
+        //FUNCION PARA ACTUALIZAR EL CONTENIDO DEL RELOJ
+        function actualizarHora(){
+            var reloj = document.getElementById("reloj");
+            reloj.textContent = horaActual();
+        }
+
+        //SE actualiza el reloj cada segundo
+        setInterval(actualizarHora, 1000)
+
+
+
+        //iniciar el reloj al cargar la pagina
+        actualizarHora();
+
+    </script>
+</body>
+</html> */
