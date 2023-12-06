@@ -20,10 +20,13 @@
         const horaActual=() => {
             var ahora = new Date();
             var horas =  ahora.getHours().toString().padStart(2, "0");
+            var fiu = horas >=12 ? "pm" : "am";
+            horas = horas % 12;
+            horas = horas ? horas : 12;
             var minutos = ahora.getMinutes().toString().padStart(2, "0");
             var segundos = ahora.getSeconds().toString().padStart(2, "0");
             var milisegundos = ahora.getMilliseconds().toString().padStart(2, "0");
-            return horas + ":" + minutos + ":" + segundos + ":" + milisegundos;
+            return horas + ":" + minutos + ":" + segundos + ":" + milisegundos + ":" + fiu;
         }
 
         //FUNCION PARA ACTUALIZAR EL CONTENIDO DEL RELOJ
